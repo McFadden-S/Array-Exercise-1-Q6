@@ -43,6 +43,11 @@ public class ArrayExercise1Q6 {  // begin class
     	String tabSpace = "      ";	// six spaces
         
         int[] fibNum = new int[MAX];        //creates array for Fibonacci sequence
+        
+        //variable for the first two in the sequence as doesnt work with calculation
+        //and there is no calculation required
+        fibNum[0] = 0;                
+        fibNum[1] = 1;
     	
     	
     	//BufferedReader fin = new BufferedReader(new FileReader("name of file"));
@@ -71,12 +76,35 @@ public class ArrayExercise1Q6 {  // begin class
     // ************************ get input **********************
     // ************************ processing ***************************
     
+    for (int i = 2; i < MAX; i++){
+        
+        fibNum[i] = fibNum[i-1] + fibNum[i-2]; 
+        
+    }//end of for loop
+    
     // ************************ print output ****************************
 
-    
+        System.out.println("\nFirst Five Numbers:");
+        for (int i = 0; i < 5; i++){
+            System.out.print(fibNum[i] + " ");
+            
+            if (i == 2){
+                System.out.println("");
+            }//end of if
+        }//end of for
+        
+        System.out.println("\n\nLast Five Numbers:");
+        for (int i = 15; i < 20; i++){
+            
+            System.out.print(fibNum[i] + " ");
+            
+            if (i == 17){
+                System.out.println("");
+            }//end of if
+        }//end of for loop
         // ******** closing message *********
         
-        System.out.println("end of processing.");
+        System.out.println("\n\nend of processing.");
         fout.format("%n%nend of processing.");
         
         // ***** close streams *****
