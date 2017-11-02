@@ -76,32 +76,37 @@ public class ArrayExercise1Q6 {  // begin class
     // ************************ get input **********************
     // ************************ processing ***************************
     
-    for (int i = 2; i < MAX; i++){
+    for (int i = 2; i < MAX; i++){ //for loop for calculation
         
-        fibNum[i] = fibNum[i-1] + fibNum[i-2]; 
+        fibNum[i] = fibNum[i-1] + fibNum[i-2]; //calculates the numbers
         
-    }//end of for loop
+    }//end of calculation for loop
     
     // ************************ print output ****************************
 
-        System.out.println("\nFirst Five Numbers:");
-        for (int i = 0; i < 5; i++){
-            System.out.print(fibNum[i] + " ");
+        System.out.println("\nFirst Five Numbers:"); //output header
+        fout.println("\nFirst Five Numbers:"); //output header
+        for (int i = 0; i < 5; i++){ //for loop for output
+            System.out.print(fibNum[i] + " "); //prints a number and adds space after
+            fout.print(fibNum[i] + " "); //prints a number and adds space after
             
-            if (i == 2){
+            if (i == 2){ //after the third adds a new line
                 System.out.println("");
-            }//end of if
-        }//end of for
+                fout.println("");
+            }//end of new line if
+        }//end of output for
         
-        System.out.println("\n\nLast Five Numbers:");
-        for (int i = 15; i < 20; i++){
+        System.out.println("\n\nLast Five Numbers:"); //output header
+        fout.println("\n\nLast Five Numbers:"); //output header
+        for (int i = 15; i < 20; i++){ //second for loop for output
+            System.out.print(fibNum[i] + " "); //prints a number and adds a space after
+            fout.print(fibNum[i] + " "); //prints a number and adds a space after
             
-            System.out.print(fibNum[i] + " ");
-            
-            if (i == 17){
+            if (i == 17){ //after the third in this row adds a new line
                 System.out.println("");
-            }//end of if
-        }//end of for loop
+                fout.println("");
+            }//end of new line if
+        }//end of second output for loop
         // ******** closing message *********
         
         System.out.println("\n\nend of processing.");
